@@ -1,0 +1,21 @@
+{
+  "name": "umi-pro-cli",
+  "version": "1.0.0",
+  "description": "基于umi antd typescript的cli脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "umi-pro-cli": "bin/cli.js"
+  },
+  "author": "MingShined",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.20.0",
+    "inquirer": "^6.4.1"
+  }
+}

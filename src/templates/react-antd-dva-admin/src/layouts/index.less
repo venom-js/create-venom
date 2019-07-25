@@ -1,0 +1,23 @@
+.trigger {
+  font-size: 16px;
+  padding: 8px;
+  background-color: #61ccfd;
+  color: #fff;
+  border-radius: 0px 0px 8px 0px;
+  position: fixed;
+  top: 80px;
+  z-index: 999;
+  transition: 0.2s;
+  &:hover {
+    color: #7554a0;
+  }
+}
+
+.mainSider {
+  :global {
+    .ant-layout-sider-children {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

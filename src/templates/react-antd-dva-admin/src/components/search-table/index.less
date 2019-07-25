@@ -1,0 +1,33 @@
+.input {
+  width: 320px;
+  height: 40px;
+  :global {
+    .ant-input-prefix {
+      font-size: 15px;
+    }
+    .ant-input-suffix {
+      right: 0;
+      .ant-input-clear-icon {
+        position: relative;
+        top: 13px;
+        right: 10px;
+      }
+    }
+    .ant-input {
+      box-sizing: border-box;
+      padding-left: 2px;
+      background: rgba(244, 245, 248, 1);
+      border-radius: 20px;
+    }
+    .ant-input:not(:last-child) {
+      box-sizing: border-box;
+      padding-right: 100px;
+    }
+  }
+}
+
+.search {
+  height: 40px;
+  background: rgba(97, 204, 253, 1);
+  border-radius: 0px 20px 20px 0px;
+}
