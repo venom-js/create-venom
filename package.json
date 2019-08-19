@@ -1,15 +1,17 @@
 {
-  "name": "umi-pro-cli",
-  "version": "1.0.0",
-  "description": "基于umi antd typescript的cli脚手架",
+  "name": "create-venom",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
+  "files": [
+    "src",
+    "cli.js"
+  ],
   "bin": {
-    "umi-pro-cli": "bin/cli.js"
+    "create-venom": "bin/cli.js"
   },
-  "author": "MingShined",
+  "author": "MingShined <996578843@qq.com>",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2",
