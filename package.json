@@ -1,12 +1,12 @@
 {
   "name": "create-venom",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "files": [
     "src",
-    "cli.js"
+    "bin"
   ],
   "bin": {
     "create-venom": "bin/cli.js"
