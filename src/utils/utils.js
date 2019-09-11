@@ -1,12 +1,12 @@
-const fs = require('fs');
+const fs = require("fs");
 
 /**
  * @name 获取模板列表
  */
 function getTplLists() {
-  return fs.readdirSync(__dirname + '/../templates').map(item => ({
+  return fs.readdirSync(__dirname + "/../templates").map(item => ({
     name: item,
-    value: item,
+    value: item
   }));
 }
 
@@ -22,21 +22,26 @@ function logTplList() {
 /**
  * @name 复制文件夹
  */
-function copyFolder(from, to) {
+function copyFolder(from, to, venomConfig) {
   if (fs.existsSync(to)) {
     const files = fs.readdirSync(from);
     files.forEach(file => {
       const fromPath = `${from}/${file}`;
       const toPath = `${to}/${file}`;
       if (fs.statSync(fromPath).isDirectory()) {
-        copyFolder(fromPath, toPath);
+        copyFolder(fromPath, toPath, venomConfig);
+        return;
+      }
+      if (file === "venom.config.ts") {
+        const newVenomConfig = `import{VenomBasicConfig}from'./types/venom';const venomBasicConfig:VenomBasicConfig=${venomConfig};export default venomBasicConfig;`;
+        fs.writeFileSync(toPath, newVenomConfig);
         return;
       }
       fs.copyFileSync(fromPath, toPath);
     });
   } else {
     fs.mkdirSync(to);
-    copyFolder(from, to);
+    copyFolder(from, to, venomConfig);
   }
   return true;
 }

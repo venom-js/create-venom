@@ -1,0 +1,62 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  z-index: 999;
+  .headerExtra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.wrap {
+  max-width: 1200px;
+  width: 1200px;
+  display: flex;
+  margin: auto;
+}
+
+.menu {
+  :global {
+    .ant-menu-item,
+    .ant-menu-submenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.sider {
+  box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+  overflow-x: hidden;
+  :global {
+    .ant-menu {
+      li:first-child {
+        margin-top: 0;
+      }
+    }
+    .ant-layout-sider-children {
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-menu-sub {
+      overflow-x: hidden;
+    }
+  }
+}

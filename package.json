@@ -3,7 +3,11 @@
   "version": "0.0.8",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "preupload": "git add .",
+    "upload": "git commit -am",
+    "postcommit": "git push"
+  },
   "files": [
     "src",
     "bin"

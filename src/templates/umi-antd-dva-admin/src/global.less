@@ -1,0 +1,358 @@
+@import '~antd/lib/style/themes/default.less';
+
+#root {
+  height: 100%;
+
+  :global {
+    // 布局
+    .hidden {
+      display: none;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    .of-hd {
+      overflow: hidden;
+    }
+
+    .of-at {
+      overflow: auto;
+    }
+
+    .of-x-hd {
+      overflow-x: hidden;
+    }
+
+    .of-x-at {
+      overflow-x: auto;
+    }
+
+    .of-y-hd {
+      overflow-y: hidden;
+    }
+
+    .of-y-at {
+      overflow-y: auto;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .w-100p {
+      width: 100%;
+    }
+
+    .h-100p {
+      height: 100%;
+    }
+
+    .mh-100p {
+      min-height: 100%;
+    }
+
+    // 背景
+
+    .bg-fff {
+      background: #fff;
+    }
+
+    .bg-333 {
+      background: #333;
+    }
+
+    // border
+
+    .bd-none {
+      border: none;
+    }
+
+    /* margin */
+
+    .mg-none {
+      margin: 0;
+    }
+
+    .mg-2x {
+      margin: 16px;
+    }
+
+    .mg-3x {
+      margin: 24px;
+    }
+
+    /* margin left */
+
+    .mg-l1x {
+      margin-left: 8px;
+    }
+
+    .mg-l2x {
+      margin-left: 16px;
+    }
+
+    .mg-l3x {
+      margin-left: 24px;
+    }
+
+    .mg-l4x {
+      margin-left: 32px;
+    }
+
+    /* margin top */
+
+    .mg-t1x {
+      margin-top: 8px;
+    }
+
+    .mg-t2x {
+      margin-top: 16px !important;
+    }
+
+    .mg-t3x {
+      margin-top: 24px;
+    }
+
+    .mg-t4x {
+      margin-top: 32px;
+    }
+
+    /* margin right */
+
+    .mg-r1x {
+      margin-right: 8px;
+    }
+
+    .mg-r2x {
+      margin-right: 16px;
+    }
+
+    .mg-r3x {
+      margin-right: 24px;
+    }
+
+    .mg-r4x {
+      margin-right: 32px;
+    }
+
+    /* margin-bottom */
+
+    .mg-b1x {
+      margin-bottom: 8px;
+    }
+
+    .mg-b2x {
+      margin-bottom: 16px;
+    }
+
+    .mg-b3x {
+      margin-bottom: 24px;
+    }
+
+    .mg-b4x {
+      margin-bottom: 32px;
+    }
+
+    .mg-b0 {
+      margin-bottom: 0 !important;
+    }
+
+    /* padding left */
+
+    .pd-1x {
+      padding: 8px;
+    }
+
+    .pd-2x {
+      padding: 16px;
+    }
+
+    .pd-3x {
+      padding: 24px;
+    }
+
+    .pd-l1x {
+      padding-left: 8px;
+    }
+
+    .pd-l2x {
+      padding-left: 16px;
+    }
+
+    .pd-l3x {
+      padding-left: 24px;
+    }
+
+    .pd-l4x {
+      padding-left: 32px;
+    }
+
+    /* padding top */
+
+    .pd-t1x {
+      padding-top: 8px;
+    }
+
+    .pd-t2x {
+      padding-top: 16px;
+    }
+
+    .pd-t3x {
+      padding-top: 24px;
+    }
+
+    .pd-t4x {
+      padding-top: 32px;
+    }
+
+    /* padding right */
+
+    .pd-r1x {
+      padding-right: 8px;
+    }
+
+    .pd-r2x {
+      padding-right: 16px;
+    }
+
+    .pd-r3x {
+      padding-right: 24px;
+    }
+
+    .pd-r4x {
+      padding-right: 32px;
+    }
+
+    /* padding bottom */
+
+    .pd-b1x {
+      padding-bottom: 8px;
+    }
+
+    .pd-b2x {
+      padding-bottom: 16px;
+    }
+
+    .pd-b3x {
+      padding-bottom: 24px;
+    }
+
+    .pd-b4x {
+      padding-bottom: 32px;
+    }
+
+    .pd-b60 {
+      padding-bottom: 60px;
+    }
+
+    .pd-b120 {
+      padding-bottom: 120px;
+    }
+
+    /* height */
+
+    .h-1x {
+      height: 8px;
+    }
+
+    .h-2x {
+      height: 16px;
+    }
+
+    .h-3x {
+      height: 24px;
+    }
+
+    .h-4x {
+      height: 32px;
+    }
+
+    /* cursor */
+
+    .pointer {
+      cursor: pointer;
+    }
+
+    /* font */
+
+    .ft-12 {
+      font-size: 12px;
+    }
+
+    .ft-14 {
+      font-size: 14px;
+    }
+
+    .ft-16 {
+      font-size: 16px;
+    }
+
+    .ft-18 {
+      font-size: 18px;
+    }
+
+    .ft-20 {
+      font-size: 20px;
+    }
+
+    .ft-22 {
+      font-size: 22px;
+    }
+
+    .ft-24 {
+      font-size: 24px;
+    }
+
+    .ft-lt {
+      text-align: left;
+    }
+
+    .ft-ct {
+      text-align: center;
+    }
+
+    .ft-rt {
+      text-align: right;
+    }
+
+    .ft-white {
+      color: #fff;
+    }
+
+    .ft-black {
+      color: #333;
+    }
+
+    /* float */
+
+    .flt-rt {
+      float: right;
+    }
+
+    .flt-lt {
+      float: left;
+    }
+
+    .ant-message {
+      z-index: 10000;
+    }
+  }
+}

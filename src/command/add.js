@@ -50,7 +50,7 @@ module.exports = () => {
       tplConfig.tplMap[tplName][item.key] = item.value;
     });
 
-    const cmdStr = `cd ${__dirname}/../templates && git clone ${gitUrl}`;
+    const cmdStr = `cd ${__dirname}/../templates && git clone ${gitUrl} -b ${branch}`;
     log('新增模板中...');
     exec(cmdStr, error => {
       if (error) {

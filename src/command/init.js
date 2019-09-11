@@ -18,6 +18,11 @@ const inputPrompt = [
     name: "projectName",
     message: "Project Name? ",
     type: "input"
+  },
+  {
+    name: "venomConfig",
+    message: "Venom Config? ",
+    type: "input"
   }
 ];
 
@@ -27,9 +32,9 @@ module.exports = () => {
     const input = yield inquirer.prompt(inputPrompt);
     const success = copyFolder(
       __dirname + `/../templates/${tplName}`,
-      input.projectName
+      input.projectName,
+      input.venomConfig
     );
-
     if (!success) {
       console.log("生成失败");
       process.exit();

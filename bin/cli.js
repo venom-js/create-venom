@@ -1,32 +1,34 @@
 #!/usr/bin/env node --harmony
-"use strict";
+'use strict'
 
-process.env.NODE_PATH = __dirname + "/../node_modules/";
+process.env.NODE_PATH = __dirname + '/../node_modules/'
 
-const program = require("commander");
-
-program.version(require("../package").version);
-
-program.usage("<command>");
+const program = require('commander')
 
 program
-  .command("list")
-  .description("显示所有模板")
-  .alias("l")
-  .action(() => {
-    require("../src/command/list")();
-  });
+	.version(require('../package').version )
 
 program
-  .command("init")
-  .description("生成项目")
-  .alias("i")
+	.usage('<command>')
+
+program
+	.command('init')
+	.description('生成项目')
+  .alias('i')
   .action(() => {
-    require("../src/command/init")();
-  });
+    require('../src/command/init')()
+  })
 
-program.parse(process.argv);
+program
+	.command('delete')
+	.description('删除模板')
+	.alias('d')
+	.action(() => {
+		require('../src/command/delete')()
+	})
 
-if (!program.args.length) {
-  program.help();
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
 }
