@@ -6,7 +6,7 @@
   "scripts": {
     "preupload": "git add .",
     "upload": "git commit -am",
-    "postcommit": "git push"
+    "postupload": "git push"
   },
   "files": [
     "src",
