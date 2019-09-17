@@ -9,8 +9,7 @@ npm-debug.log*
 yarn.lock
 yarn-debug.log*
 yarn-error.log*
-src/pages/.umi/
-mock/
+templates/.DS_Store
 
 # Editor directories and files
 .idea

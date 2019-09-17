@@ -13,7 +13,7 @@ module.exports = () => {
   co(function*() {
     /** @name 打印一些超级酷(S)炫(B)的log */
     log(chalk.black.bgWhite.bold('Hello!\n'));
-    log(chalk.keyword('orange')('欢迎使用umi-pro-cli!\n'));
+    log(chalk.keyword('orange')('欢迎使用create-venom!\n'));
     log(chalk.rgb(123, 45, 67).underline('> 添加模板功能\n'));
     log(chalk.hex('#DEADED').bold('Happy & Joy!\n'));
 
@@ -25,7 +25,7 @@ module.exports = () => {
      *  */
     let tplName = yield prompt(chalk.yellow('👉  模板名称: '));
     let gitUrl = yield prompt(chalk.blue('👉  Git Url: '));
-    let branch = yield prompt(chalk.green('👉  分支名称: '));
+    let branch = yield prompt(chalk.green('👉  分支名称: ')) || 'master';
 
     /** @name 如果模板名称已经存在 */
     if (tplConfig.tplMap[tplName]) {
@@ -58,6 +58,7 @@ module.exports = () => {
         process.exit();
         return;
       }
+      exec(`cd ${__dirname}/../templates/${tplName} && rm -rf .git`)
       updateTemplates();
       log(chalk.green('\n✨  模板新增成功!\n'));
       log(chalk.grey('😁  The last template list is: \n'));

@@ -1,34 +1,48 @@
 #!/usr/bin/env node --harmony
-'use strict'
+"use strict";
 
-process.env.NODE_PATH = __dirname + '/../node_modules/'
+process.env.NODE_PATH = __dirname + "/../node_modules/";
 
-const program = require('commander')
+const program = require("commander");
 
-program
-	.version(require('../package').version )
+program.version(require("../package").version);
 
-program
-	.usage('<command>')
+program.usage("<command>");
 
 program
-	.command('init')
-	.description('生成项目')
-  .alias('i')
+  .command("add")
+  .description("添加一个模板")
+  .alias("a")
   .action(() => {
-    require('../src/command/init')()
-  })
+    require("../src/command/add")();
+  });
 
 program
-	.command('delete')
-	.description('删除模板')
-	.alias('d')
-	.action(() => {
-		require('../src/command/delete')()
-	})
+  .command("list")
+  .description("显示所有模板")
+  .alias("l")
+  .action(() => {
+    require("../src/command/list")();
+  });
 
-program.parse(process.argv)
+program
+  .command("init")
+  .description("生成项目")
+  .alias("i")
+  .action(() => {
+    require("../src/command/init")();
+  });
 
-if(!program.args.length){
-  program.help()
+program
+  .command("delete")
+  .description("删除模板")
+  .alias("d")
+  .action(() => {
+    require("../src/command/delete")();
+  });
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
 }

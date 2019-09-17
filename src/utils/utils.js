@@ -4,10 +4,13 @@ const fs = require("fs");
  * @name 获取模板列表
  */
 function getTplLists() {
-  return fs.readdirSync(__dirname + "/../templates").map(item => ({
-    name: item,
-    value: item
-  }));
+  return fs
+    .readdirSync(__dirname + "/../templates")
+    .filter(item2 => item2 !== ".DS_Store")
+    .map(item => ({
+      name: item,
+      value: item
+    }));
 }
 
 /**
